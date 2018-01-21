@@ -1,0 +1,18 @@
+<div class="newset">
+<h2>Name</h2>
+<%= @legopins.name %><br />
+<h2>Set Number</h2>
+<%= @legopins.setnumber %><br />
+<h2>Year</h2>
+<%= @legopins.year %><br />
+<h2>URL</h2>
+<%= link_to @legopins.url %>
+<br />
+<%= image_tag(@legopins.image.url(:medium)) %>
+</div>
+<br />
+<%#= <a href="/legopins/<%= @legopins.id/edit">Edit</a> %>
+<% if user_signed_in? && current_user.admin? %>
+<%= link_to 'Edit', edit_legopin_path(@legopins) %>
+<%= link_to 'Delete', @legopins, :method => 'delete', data: {confirm: "Are you sure you want to delete #{@legopins.name}?"} %>
+<% end %>
