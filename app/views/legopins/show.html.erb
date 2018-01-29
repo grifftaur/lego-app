@@ -1,15 +1,26 @@
 <div class="newset">
-<h2>Name</h2>
-<%= @legopins.name %><br />
-<h2>Set Number</h2>
-<%= @legopins.setnumber %><br />
-<h2>Year</h2>
-<%= @legopins.year %><br />
-<h2>URL</h2>
-<%= link_to @legopins.url %>
-<br />
-<%= image_tag(@legopins.image.url(:medium)) %>
+  <h2>Name</h2>
+    <%= @legopins.name %><br />
+  <h2>Set Number</h2>
+    <%= @legopins.setnumber %><br />
+  <h2>Year</h2>
+    <%= @legopins.year %><br />
+  <h2>URL</h2>
+    <%= link_to @legopins.url %>
+  <h2>Average Build Time</h2>
+    <%= distance_of_time_in_words(BuildTime.average(:completetime)) %>
+  <br />
+    <%= image_tag(@legopins.image.url(:medium)) %>
 </div>
+
+<br />
+
+  <% if user_signed_in? %>
+  <div class="subittime">
+    <%= link_to "Submit Build Time", new_legopin_buildtime_path(@legopins)  %>
+  </div>
+  <% end %>
+
 <br />
 <%#= <a href="/legopins/<%= @legopins.id/edit">Edit</a> %>
 <% if user_signed_in? && current_user.admin? %>

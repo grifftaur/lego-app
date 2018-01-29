@@ -1,13 +1,13 @@
 <h1>Welcome to How Long To Build!</h1>
 
-
+<!--
 <div>
   <% if user_signed_in? && current_user.admin? %>
     <h1><%= link_to "Create new lego set", new_legopin_path %></h1>
   <% end %>
 
 </div>
-
+-->
 
 <% @legopins.each do |lego| %>
   <h3><%= link_to "#{lego.name}", legopin_path(lego) %></h3>

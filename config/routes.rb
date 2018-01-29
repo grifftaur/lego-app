@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-
   devise_for :users
-root to: 'legopins#index'
-
-resources :legopins
+  resources :legopins do
+    resources :buildtimes, only: %i[new create]
+  end
+  root to: 'legopins#index'
 end

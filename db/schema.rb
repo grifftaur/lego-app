@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180121183532) do
+ActiveRecord::Schema.define(version: 20180128214257) do
+
+  create_table "build_times", force: :cascade do |t|
+    t.integer "completetime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "lego_pins_id"
+    t.index ["lego_pins_id"], name: "index_build_times_on_lego_pins_id"
+    t.index ["user_id"], name: "index_build_times_on_user_id"
+  end
 
   create_table "legopins", force: :cascade do |t|
     t.string "name"
@@ -23,23 +33,6 @@ ActiveRecord::Schema.define(version: 20180121183532) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
-  end
-
-  create_table "legosets", force: :cascade do |t|
-    t.string "name", null: false
-    t.date "year", null: false
-    t.integer "set_number", null: false
-    t.text "url", null: false
-    t.integer "average_build_time", null: false
-    t.integer "lego_set_average_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["lego_set_average_id"], name: "index_legosets_on_lego_set_average_id"
-  end
-
-  create_table "setlegos", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

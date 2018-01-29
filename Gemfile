@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'paperclip', '~> 5.1'
+gem 'dotiw', '~> 3.1', '>= 3.1.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
