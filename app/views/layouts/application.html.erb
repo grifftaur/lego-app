@@ -6,9 +6,36 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<!-- jquery CDN from Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   </head>
 
   <body>
+    <div class="navbar-fixed">
+      <nav class="blue">
+        <div class="nav-wrapper">
+          <a href="" class="brand-logo">How Long To Build</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><%= link_to "Home", root_path %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "Create Set", new_legopin_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+              <li><%= link_to "Sign in", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <% end %>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+
+    <!--
     <div class="topnav">
       <ul>
         <li><%= link_to "Home", root_path %></li>
@@ -19,6 +46,7 @@
           <li><%= link_to "Sign in", new_user_session_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <% end %>
+        -->
 
       </ul>
 </div>

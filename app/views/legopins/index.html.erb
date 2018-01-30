@@ -1,5 +1,3 @@
-<h1>Welcome to How Long To Build!</h1>
-
 <!--
 <div>
   <% if user_signed_in? && current_user.admin? %>
@@ -9,6 +7,20 @@
 </div>
 -->
 
-<% @legopins.each do |lego| %>
-  <h3><%= link_to "#{lego.name}", legopin_path(lego) %></h3>
-<% end %>
+
+<div class="container">
+   <div class="row">
+      <% @legopins.each do |lego| %>
+        <div class="col s4">
+                <div class="card small">
+                  <div class="card-content">
+                    <span class="card-title"><%= link_to "#{lego.name}", legopin_path(lego) %></span>
+                  </div>
+                    <div class="card-image">
+                      <%= image_tag(lego.image.url(:medium)) %>
+                    </div>
+                </div>
+        </div>
+    <% end %>
+  </div>
+</div>

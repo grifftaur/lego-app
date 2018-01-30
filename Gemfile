@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-gem 'paperclip', '~> 5.1'
+gem 'paperclip', '~> 5.2.1it'
 gem 'dotiw', '~> 3.1', '>= 3.1.1'
 
 # Use Capistrano for deployment

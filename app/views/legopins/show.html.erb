@@ -1,29 +1,53 @@
-<div class="newset">
-  <h2>Name</h2>
-    <%= @legopins.name %><br />
-  <h2>Set Number</h2>
-    <%= @legopins.setnumber %><br />
-  <h2>Year</h2>
-    <%= @legopins.year %><br />
-  <h2>URL</h2>
-    <%= link_to @legopins.url %>
-  <h2>Average Build Time</h2>
-    <%= distance_of_time_in_words(BuildTime.average(:completetime)) %>
-  <br />
-    <%= image_tag(@legopins.image.url(:medium)) %>
-</div>
+<div class="container">
+   <div class="row">
+     <div class="col s6">
+      <h4>Name</h2>
+        <%= @legopins.name %><br />
+      </div>
+      <div class="col s6">
+      <h4>Set Number</h2>
+        <%= @legopins.setnumber %><br />
+      </div>
 
-<br />
-
-  <% if user_signed_in? %>
-  <div class="subittime">
-    <%= link_to "Submit Build Time", new_legopin_buildtime_path(@legopins)  %>
   </div>
-  <% end %>
+  <div class="row">
+       <div class="col s6">
+          <h4>Year</h2>
+            <%= @legopins.year %><br />
+      </div>
+      <div class="col s6">
+          <h4>URL</h2>
+            <%= link_to @legopins.url %>
+      </div>
+</div>
+      <div class="row">
+        <div class="col s6">
+          <h4>Average Build Time</h2>
+            <%= distance_of_time_in_words(BuildTime.average(:completetime)) %>
+        </div>
+        <div class="col s6">
+              <h4>Submit Build Time</h4>
+              <% if user_signed_in? %>
+                <%= link_to "Submit Build Time", new_legopin_buildtime_path(@legopins)  %>
+              <% end %>
+        </div>
+        </div>
 
-<br />
-<%#= <a href="/legopins/<%= @legopins.id/edit">Edit</a> %>
-<% if user_signed_in? && current_user.admin? %>
-<%= link_to 'Edit', edit_legopin_path(@legopins) %>
-<%= link_to 'Delete', @legopins, :method => 'delete', data: {confirm: "Are you sure you want to delete #{@legopins.name}?"} %>
-<% end %>
+
+      <div class="row">
+        <div class="col s6">
+          <%= image_tag(@legopins.image.url(:medium)) %>
+        </div>
+      </div>
+
+  <div class="row">
+    <div class="s6">
+    <%#= <a href="/legopins/<%= @legopins.id/edit">Edit</a> %>
+    <% if user_signed_in? && current_user.admin? %>
+    <%= link_to 'Edit', edit_legopin_path(@legopins) %>
+    <%= link_to 'Delete', @legopins, :method => 'delete', data: {confirm: "Are you sure you want to delete #{@legopins.name}?"} %>
+    <% end %>
+    </div>
+  </div>
+
+</div>
