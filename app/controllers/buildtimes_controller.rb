@@ -11,7 +11,7 @@ class BuildtimesController < ApplicationController
    def create
       @legopins = Legopin.find(params[:legopin_id])
       @buildtimes = BuildTime.new(build_params)
-      @buildtimes.lego_pins_id = @legopins.id
+      @buildtimes.legopins_id = @legopins.id
       @buildtimes.user_id = current_user.id
 
       if @buildtimes.save
@@ -23,11 +23,11 @@ class BuildtimesController < ApplicationController
 
   private
 
-   def build_params
-     params.require(:buildtimes).permit(:hours, :minutes)
-   end
+     def build_params
+       params.require(:buildtimes).permit(:hours, :minutes)
+     end
 
-   def find_legopin
-     @legopins = Legopin.find(params[:legopin_id])
-   end
-end
+     def find_legopin
+       @legopins = Legopin.find(params[:legopin_id])
+     end
+  end

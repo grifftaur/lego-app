@@ -1,5 +1,12 @@
-<h1>Lego Build Time for <%= @legopins.name %></h1>
+<div class="container">
+    <div class="row">
+      <div class="col s6 offset-m3">
+        <h4> <%= @legopins.name %></h4>
+      </div>
+    </div>
 
-<%= render :partial => 'form' %>
+    <%= render :partial => 'form' %>
 
-<%= link_to 'Cancel', legopin_path(@legopins) %>
+    <%= link_to 'Cancel', legopin_path(@legopins) %>
+
+</div>

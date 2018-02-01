@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20180128214257) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "lego_pins_id"
-    t.index ["lego_pins_id"], name: "index_build_times_on_lego_pins_id"
+    t.integer "legopins_id"
+    t.index ["legopins_id"], name: "index_build_times_on_legopins_id"
     t.index ["user_id"], name: "index_build_times_on_user_id"
   end
 

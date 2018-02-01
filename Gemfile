@@ -33,6 +33,11 @@ gem 'devise', '~> 4.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'paperclip', '~> 5.2.1it'
 gem 'dotiw', '~> 3.1', '>= 3.1.1'
+gem 'materialize-sass'
+gem 'searchkick', '~> 2.4'
+gem 'elasticsearch-rails', '~> 5.0', '>= 5.0.2'
+gem 'elasticsearch-model', '~> 5.0', '>= 5.0.2'
+gem 'ransack'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

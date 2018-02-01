@@ -1,8 +1,20 @@
 class LegopinsController < ApplicationController
 before_action :authenticate_user!, except: [:index, :show]
 
+=begin
+  def search
+    if params[:query].present?
+      @legopins = Legopin.search(params[:query])
+    else
+      @legopins = Legopin.all
+    end
+  end
+=end
+
   def index
-    @legopins = Legopin.all
+      @q = Legopin.ransack(params[:q])
+      @legopins = @q.result
+      #@legopins = Legopin.all
   end
 
   def show
