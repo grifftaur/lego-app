@@ -23,7 +23,7 @@
       <div class="row">
         <div class="col s6">
           <h4>Average Build Time</h2>
-            <%= distance_of_time_in_words(BuildTime.average(:completetime)) %>
+            <%= distance_of_time(@avg_buildtime, only: [:hours, :minutes]) %>
         </div>
         <div class="col s6">
               <h4>Submit Build Time</h4>
@@ -36,7 +36,7 @@
 
       <div class="row">
         <div class="col s6">
-          <%= image_tag(@legopins.image.url(:medium)) %>
+           <%= image_tag(@legopins.image.url(:medium)) %>
         </div>
       </div>
 

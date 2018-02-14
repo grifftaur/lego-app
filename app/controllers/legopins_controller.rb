@@ -19,6 +19,8 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def show
     @legopins = Legopin.find(params[:id])
+    @avg_buildtime = BuildTime.where(legopins_id: @legopins.id).average(:completetime)
+
   end
 
   def new
