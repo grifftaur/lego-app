@@ -23,7 +23,11 @@
       <div class="row">
         <div class="col s6">
           <h4>Average Build Time</h2>
+            <% if @avg_buildtime.blank? %>
+             <h6>No build times have been submitted</h6>
+            <% else %>
             <%= distance_of_time(@avg_buildtime, only: [:hours, :minutes]) %>
+            <% end %>
         </div>
         <div class="col s6">
               <h4>Submit Build Time</h4>

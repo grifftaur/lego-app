@@ -1,7 +1,7 @@
 <%= form_for [@legopins, @buildtimes], as: :buildtimes, url: legopin_buildtimes_path do |f|  %>
 
   <div class="form-group">
-      <%= f.label :hour %>
+      <%= f.label :hours %>
       <%= f.number_field :hours, min: 1, required: true %>
       <%= f.label :minutes %>
       <%= f.number_field :minutes, min: 1, required: true %>
