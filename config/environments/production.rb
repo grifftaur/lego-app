@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-config.actionmailer.defaulturl_options = { host: 'https://howlongtobuild.herokuapp.com' }
+config.actionmailer.defaulturl_options = { host: 'howlongtobuild.herokuapp.com' }
 
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.perform_deliveries = true
@@ -17,7 +17,7 @@ user_name: ENV["GMAIL_USERNAME"],
 password: ENV["GMAIL_PASSWORD"]
 }
 
-Rails.application.routes.default_url_options[:host] = 'https://howlongtobuild.herokuapp.com'
+Rails.application.routes.default_url_options[:host] = 'howlongtobuild.herokuapp.com'
   # Code is not reloaded between requests.
   config.cache_classes = true
 
