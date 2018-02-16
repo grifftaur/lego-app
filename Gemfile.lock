@@ -72,6 +72,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    dotenv (0.7.0)
     dotiw (3.1.1)
       actionpack (>= 3)
       i18n
@@ -95,6 +96,9 @@ GEM
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
+    foreman (0.64.0)
+      dotenv (~> 0.7.0)
+      thor (>= 0.13.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.5.7)
@@ -251,6 +255,7 @@ DEPENDENCIES
   elasticsearch-model (~> 5.0, >= 5.0.2)
   elasticsearch-rails (~> 5.0, >= 5.0.2)
   figaro (~> 1.1, >= 1.1.1)
+  foreman
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   materialize-sass
