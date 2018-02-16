@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-config.actionmailer.defaulturl_options = { host: 'howlongtobuild.herokuapp.com' }
+config.action_mailer.default_url_options = { host: 'howlongtobuild.herokuapp.com' }
 
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.perform_deliveries = true
