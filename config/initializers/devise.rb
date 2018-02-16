@@ -7,12 +7,12 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '0b662fb457624cb82354ffad54db04f9c20d6021d28eb902b634464f9018612087859bb1d6702fde09afdbab236f2d4d1a3c7e49a073b779f8d15111161b9150'
-
+  ActionMailer::Base.default_url_options = { host: "localhost:3000" }
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = "Password Reset for HLTB <passwords@howlongtobuild.com>"
+  config.mailer_sender = "Password Reset for HLTB <howlongtobuild@gmail.com>"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
