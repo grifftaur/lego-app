@@ -30,6 +30,7 @@ gem 'searchkick', '~> 2.4'
 gem 'elasticsearch-rails', '~> 5.0', '>= 5.0.2'
 gem 'elasticsearch-model', '~> 5.0', '>= 5.0.2'
 gem 'ransack'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
