@@ -10,7 +10,7 @@
 
       gtag('config', 'UA-17178599-4');
     </script>
-    
+
     <title><%link_to "HLTB", root_path %> </title>
     <%= csrf_meta_tags %>
 
@@ -32,8 +32,8 @@
     <div class="navbar-fixed">
       <nav class="blue">
         <div class="nav-wrapper">
-          <a href="" class="brand-logo">How Long To Build</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <a href="" class="brand-logo left">How Long To Build</a>
+          <ul id="nav-mobile" class="right">
             <li><%= link_to "Home", root_path %></li>
             <% if user_signed_in? %>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

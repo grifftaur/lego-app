@@ -1,2 +1,22 @@
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.card.small {
+  height: auto;
+}
+.card.small .card-content {
+  height: auto;
+}
+.card.small .card-action {
+  position: relative;
+}
+
+.card.medium {
+  height: auto;
+}
+.card.medium .card-content {
+  height: auto;
+}
+.card.medium .card-action {
+  position: relative;
+}
