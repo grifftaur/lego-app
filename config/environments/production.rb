@@ -21,10 +21,10 @@ password: ENV["GMAIL_PASSWORD"]
 config.paperclip_defaults = {
   storage: :s3,
   s3_credentials: {
-    bucket: ENV.fetch('S3_BUCKET_NAME'),
-    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-    s3_region: ENV.fetch('AWS_REGION'),
+    s3S3_BUCKET_NAME: ENV.fetch('S3_BUCKET_NAME'),
+    AWS_ACCESS_KEY_ID_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+    AWS_SECRET_ACCESS_KEY_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    AWS_REGION: ENV.fetch('AWS_REGION'),
   }
 }
 
